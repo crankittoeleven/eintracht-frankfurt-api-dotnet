@@ -36,7 +36,7 @@ namespace eintracht_frankfurt_api_dotnet.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateLanguage(Player player)
+        public async Task<IActionResult> CreatePlayer(Player player)
         {
             if (!ModelState.IsValid)
             {
@@ -50,7 +50,7 @@ namespace eintracht_frankfurt_api_dotnet.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateLanguage(int id, Player player)
+        public async Task<ActionResult> UpdatePlayer(int id, Player player)
         {
             if (await _unitOfWork.Player.GetById(id) == null)
             {
